@@ -14,7 +14,7 @@ app.use(methodOverride('_method'));
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
 
-
+// gopal is king 
 
 app.use(express.static(path.join(__dirname,"public")));
 
