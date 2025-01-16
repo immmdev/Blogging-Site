@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Logs</title>
+    <link rel="stylesheet" href="/logs.css">
+</head>
+<body>
+    <h1 class="logo">&lt;/DevLogs&gt;</h1>
+    <form method="get" action="logs/new">
+        <button type="button" class="home-btn" onclick="redirectToHome()">Home</button>
+        <button class="add-new">addNewLog</button>
+    </form>
+    <div class="container">
+        <%for(user of users){%>
+            <div class="box">
+                <h3 class="userId"><%=user.Username%></h3>
+                <h1 class="userTitle">Title:<%=user.Title%></h1>
+                <pre class="userDescription"><%=user.Description%></pre>
+                <div class="btns">
+                    <form method="get" action="logs/detail/<%=user._id%>">
+                        <button class="read-more">InDetail</button>
+                    </form>
+                    <form id="delete-form" method="post" action="/logs/<%= user._id %>?_method=DELETE" onsubmit="return confirmDeletion(event)">
+                        <input type="hidden" name="password" id="password-input" />
+                        <button type="submit" class="delete-log">Delete</button>
+                    </form>
+                    
+                </div>
+                
+            </div>
+        <%}%>
+    </div>
+
+<script src="/logs.js"></script>
+</body>
+</html>
+

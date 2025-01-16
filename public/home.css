@@ -1,0 +1,70 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("home.png");
+  background-size: cover;
+  font-family: 'Courier New', Courier, monospace; 
+}
+
+p{
+  color: #fff;
+  position: relative;
+  bottom: 150px;
+  left:5px;
+}
+
+h1{
+  color: #fff;
+  position: relative;
+  bottom: 150px;
+  left:5px;
+
+}
+.button-container {
+  text-align: center;
+}
+
+
+button{
+  background-color: #000; 
+  color: #fff; 
+  font-family: 'Courier New', Courier, monospace; 
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  bottom: 100px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0px #fff, 
+              -4px -4px 0px #000; 
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 0px #fff, 
+              -6px -6px 0px #000;
+}
+
+button:active {
+  transform: translateY(2px); 
+  box-shadow: 2px 2px 0px #fff, 
+              -2px -2px 0px #000; 
+}
+
+/* Responsive Button */
+@media (max-width: 600px) {
+  .tech-button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+}

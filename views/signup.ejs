@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <link rel="stylesheet" href="/signup.css">
+    <script>
+        function redirectToHome() {
+          window.location.href = '/';
+        }
+      </script>
+</head>
+<body>
+    <h1>&lt;/DevLogs&gt;</h1>
+    <div class="container">
+        <h1>SignUp</h1>
+        <form method="POST" action="/">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Choose a username" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+            <div class="buttons">
+                <button type="submit" class="submit-btn">SignUp</button>
+                <button type="submit" class="previous-btn" onclick="redirectToHome()">Previous</button>
+            </div>
+        </form>
+        
+    </div>
+</body>
+</html>
