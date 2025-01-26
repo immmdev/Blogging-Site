@@ -97,21 +97,26 @@ app.get("/login",(req,res)=>{ //going to match data
 });
 
 
-app.post("/welcome", async (req,res)=>{ // matching data
-    let {username,password}=req.body;
-    const  user= await devlog.findOne({userName:username});
-    let pwd=user.password;
-    let userReq=user.userName;
-    console.log(pwd);
-    console.log(user);
-    if(username===userReq && password===pwd){
-        res.redirect("/welcome");
-    }
-    else{
-        res.redirect("/login");
-    }
+app.post("/welcome", async (req, res) => {
+    try {
+        const { username, password } = req.body;
+        const user = await devlog.findOne({ userName: username });
 
+        if (!user) {
+            return res.status(401).send("Invalid username or password.");
+        }
+
+        if (username === user.userName && password === user.password) {
+            return res.redirect("/welcome");
+        } else {
+            return res.status(401).send("Invalid username or password.");
+        }
+    } catch (err) {
+        console.error("Error during login:", err);
+        res.status(500).send("Internal server error. Please try again later.");
+    }
 });
+
 
 // adding log to the table
 app.get("/logs/new",(req,res)=>{
