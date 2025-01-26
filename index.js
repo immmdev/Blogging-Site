@@ -1,4 +1,5 @@
 const express=require("express");
+require('dotenv').config();
 var methodOverride = require('method-override');
 const app=express();
 const port= process.env.PORT || 8080;
@@ -6,6 +7,13 @@ const path=require("path");
 const mongoose=require("mongoose");
 const devlog=require("./models/devlogs.js");
 const log=require("./models/logs.js");
+
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Connected to MongoDB Atlas"))
+  .catch((err) => console.error("Error connecting to MongoDB:", err));
 
 main().then((res)=>{
     console.log("connection succesfull")
