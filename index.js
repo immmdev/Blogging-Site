@@ -8,22 +8,20 @@ const mongoose=require("mongoose");
 const devlog=require("./models/devlogs.js");
 const log=require("./models/logs.js");
 
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("Connected to MongoDB Atlas"))
-  .catch((err) => console.error("Error connecting to MongoDB:", err));
 
-main().then((res)=>{
-    console.log("connection succesfull")
-})
-.catch((err) => {
-    console.log(err)});
-
+const MONGO_URL=process.env.MONGO_URL;
+main()
+    .then(()=>{
+    console.log("connected to DB");
+    })
+    .catch((err)=>{
+    console.log("")
+    })
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/devlogsDB');
+    await mongoose.connect(MONGO_URL);
+
 }
+
 
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
