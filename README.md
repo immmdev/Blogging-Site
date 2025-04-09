@@ -31,7 +31,7 @@ DevLogs is a basic yet powerful blogging platform designed specifically for code
    ```
 4. Start the development server:
    ```bash
-   npm start
+   node index.js
    ```
 5. Open your browser and go to `http://localhost:8080` to see the application in action.
 
