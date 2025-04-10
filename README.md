@@ -38,7 +38,6 @@ readme_content = """
 
 ## ⚙️ Getting Started (Local Development)
 
-```bash
 # 1. Clone the repository
 git clone https://github.com/immmdev/Blogging-Site.git
 
