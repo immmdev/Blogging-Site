@@ -48,7 +48,7 @@ cd Blogging-Site
 npm install
 
 # 4. Create a .env file and configure:
-# DB_URL=<your MongoDB Atlas URI>
+DB_URL=<your MongoDB Atlas URI>
 
 # 5. Run the server
 node index.js
