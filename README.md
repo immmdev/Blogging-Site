@@ -38,7 +38,7 @@ readme_content = """
 
 ## ⚙️ Getting Started (Local Development)
 
-\`\`\`bash
+```bash
 # 1. Clone the repository
 git clone https://github.com/immmdev/Blogging-Site.git
 
@@ -51,15 +51,11 @@ npm install
 # 4. Create a .env file and configure:
 # DB_URL=<your MongoDB Atlas URI>
 
-
 # 5. Run the server
 node index.js
 
 # 6. Open in browser
 http://localhost:8080
-\`\`\`
-
----
 
 ## 🧪 Usage Guide
 
