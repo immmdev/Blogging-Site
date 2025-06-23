@@ -35,7 +35,7 @@
 
 ---
 
-## ⚙️ Getting Started (Local Development)
+# ⚙️ Getting Started (Local Development)
 
 # 1. Clone the repository
 git clone https://github.com/immmdev/Blogging-Site.git
@@ -55,7 +55,7 @@ node index.js
 # 6. Open in browser
 http://localhost:8080
 
-## 🧪 Usage Guide
+# 🧪 Usage Guide
 
 - 🔐 **Sign Up / Login** – Start by creating an account or logging in.
 - ✍️ **Create a Blog** – Use the dashboard to write and post blogs.
@@ -64,7 +64,7 @@ http://localhost:8080
 
 ---
 
-## 🤝 Contributing
+# 🤝 Contributing
 
 Have suggestions or improvements?  
 Feel free to fork the repo, create a new branch, and open a pull request.  
@@ -72,7 +72,7 @@ Let’s build something cool together 💻
 
 ---
 
-## 🙌 Acknowledgements
+# 🙌 Acknowledgements
 
 - 🛠️ [Express.js](https://expressjs.com/) – Fast, minimal Node.js framework  
 - 🌐 [Render](https://render.com) – Seamless full-stack deployment  
@@ -81,7 +81,7 @@ Let’s build something cool together 💻
 
 ---
 
-## 📬 Contact
+# 📬 Contact
 
 For feedback, ideas, or queries, feel free to connect:
 
